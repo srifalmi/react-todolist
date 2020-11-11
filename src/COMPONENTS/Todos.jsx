@@ -18,9 +18,6 @@ const Todos = () => {
       <div className="todo">
         <span className="todo-text">Learning React</span>
       </div>
-      <div className="todo">
-        <span className="todo-text">Learning React</span>
-      </div>
     </section>
   );
 };
