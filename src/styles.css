@@ -2,21 +2,17 @@
   box-sizing: border-box;
 }
 
-:root{
---main-red-color : #e06262;
---main-black-color : #484848;
-
-
+:root {
+  --main-red-color: #e06262;
+  --main-black-color: #484848;
 }
 
-.main-red-color{
-  color : var(--main-red-color);
-
+.main-red-color {
+  color: var(--main-red-color);
 }
 
-.main-black-color{
-  color : var(--main-black-color);
-
+.main-black-color {
+  color: var(--main-black-color);
 }
 html {
   font-size: 10px;
@@ -41,151 +37,121 @@ html {
 
 .container {
   width: 600px;
-  height: 600px;
+  height: 700px;
   background-color: #f2eecb;
   border-radius: 4px;
-  padding: 32px;
-
+  padding: 44px;
 }
 
 .frame {
-border : 1px solid var(--main-black-color);
+  border: 2px solid var(--main-black-color);
 
-height : 100%;
+  height: 100%;
 
-display : flex;
-flex-direction: column;
-justify-content: space-between;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-.header{
-  display : flex;
+.header {
+  display: flex;
   align-items: flex-start;
-
 }
 
 .header-title {
-  flex : 1;
+  flex: 1;
   text-align: center;
 
   color: var(--main-black-color);
 
   font-size: 3.6rem;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   text-transform: lowercase;
-  
 }
 
-.header-button{
-
-  font-size:1.8rem;
-  font-family: 'Bungee', sans-serif;
-
+.header-button {
+  font-size: 1.8rem;
+  font-family: "Bungee", sans-serif;
 
   padding: 16px;
 
   cursor: pointer;
-   
-  background : unset;
+
+  background: unset;
   border: unset;
-  outline: unset; 
-
+  outline: unset;
 }
- 
- .header-button.main-red-color:active {
 
+.header-button.main-red-color:active {
   text-shadow: 1px 1px 2px var(--main-red-color);
-  
- }
-  .header-button.main-black-color:active {
-
-    text-shadow: 1px 1px 2px var(--main-black-color);
-    
+}
+.header-button.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
-.add{
+.add {
   padding: 16px;
-   
 }
-.add-form{
+.add-form {
   display: flex;
   align-items: flex-start;
-
-
 }
-.add-input{
- background: unset;
- border: unset;
- padding: 0 64px;
-  
- flex: 1;
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
 
- border-bottom : 1px solid var(--main-red-color);
- outline: unset;
+  flex: 1;
 
+  border-bottom: 1px solid var(--main-red-color);
+  outline: unset;
 
- font-family: "Trispace", sans-serif;
- font-size: 16px;
- text-transform : lowercase;
-
-
+  font-family: "Trispace", sans-serif;
+  font-size: 16px;
+  text-transform: lowercase;
 }
 
-.add-button{
- font-size: 1.8rem;
- font-family: "Bungee", sans-serif;
+.add-button {
+  font-size: 1.8rem;
+  font-family: "Bungee", sans-serif;
 
- padding: 16px;
- padding-right: unset;
- cursor: pointer;
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
 
- background : unset;
- border: unset;
- outline: unset;
-
+  background: unset;
+  border: unset;
+  outline: unset;
 }
 
-.add-button.main-black-color:active{
+.add-button.main-black-color:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
 .todos {
-  display : flex;
-  flex-direction : column;
+  display: flex;
+  flex-direction: column;
 
+  min-height: 500px;
 }
 
-.todo{
-  position : relative;
+.todo {
+  position: relative;
 
-  flex :1 0 auto;
+  flex: 1 0 auto;
   text-align: center;
 
-  min-height: 34px;
-  margin : 16px 0 0 ;
-font-family: "Trispace", sans-serif;
-font-size: 24px;
+  max-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Trispace", sans-serif;
+  font-size: 24px;
 
-border-bottom: 1px solid var(--main-red-color);
-
-
+  border-bottom: 1px solid var(--main-red-color);
 }
 
 .todo-text {
+  width: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  
 }
- 
-
-
-
-
-
-
-
-  
-
