@@ -1,31 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Todo from "./Todo";
 
-const Todos = () => {
-  const todos = [
-    {
-      text: "Belajar terus!"
-    },
-    {
-      text: "AKU KENYANG!"
-    },
-    {
-      text: "AKU DIAM!"
-    },
-    {
-      text: "SEMOGA BERHASIL!"
-    },
-    {
-      text: "apasiii?"
-    },
-    {
-      text: "ayok semangat!"
-    },
-    {
-      text: "ayo solat!"
-    }
-  ];
+const Todos = ({ todos }) => {
   return (
     <section className="todos">
       {todos.map((todo) => {
@@ -33,6 +11,13 @@ const Todos = () => {
       })}
     </section>
   );
+};
+Todos.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
 };
 
 export default Todos;
