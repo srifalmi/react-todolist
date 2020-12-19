@@ -11,9 +11,18 @@
   color: var(--main-red-color);
 }
 
+.align-right {
+  text-align: right;
+}
+
 .main-black-color {
   color: var(--main-black-color);
 }
+
+.align-left {
+  text-align: left;
+}
+
 html {
   font-size: 10px;
 }
@@ -59,7 +68,7 @@ html {
 }
 
 .header-title {
-  flex: 1;
+  width: 52%;
   text-align: center;
 
   color: var(--main-black-color);
@@ -72,7 +81,7 @@ html {
 .header-button {
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
-
+  width: 24%;
   padding: 16px;
 
   cursor: pointer;
