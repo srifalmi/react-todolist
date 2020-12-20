@@ -28,6 +28,7 @@ html {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+/*
 .container {
   width: 600px;
   height: 700px;
@@ -45,7 +46,9 @@ html {
   flex-direction: column;
   justify-content: space-between;
 }
+*/
 
+/*
 .header {
   display: flex;
   align-items: flex-start;
@@ -61,6 +64,9 @@ html {
   font-family: "Bungee", sans-serif;
   text-transform: lowercase;
 }
+*/
+
+/*
 
 .add {
   padding: 16px;
@@ -100,7 +106,9 @@ html {
 .add-button.main-black-color:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
 }
+*/
 
+/*
 .todos {
   display: flex;
   flex-direction: column;
@@ -108,6 +116,9 @@ html {
   min-height: 500px;
 }
 
+*/
+
+/*
 .todo {
   position: relative;
 
@@ -129,7 +140,9 @@ html {
   left: 50%;
   transform: translate(-50%);
 }
+*/
 
+/*
 .todo-placeholder-text {
   font-size: 24px;
   font-family: "Trispace", sans-serif;
@@ -142,3 +155,4 @@ html {
   font-size: 24px;
   font-family: "Bungee", sans-serif;
 }
+*/

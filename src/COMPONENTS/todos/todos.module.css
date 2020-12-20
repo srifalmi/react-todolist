@@ -1,0 +1,19 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 500px;
+}
+
+.todoPlaceholderText {
+  font-size: 24px;
+  font-family: "Trispace", sans-serif;
+
+  text-align: center;
+  padding: 16px;
+}
+
+.addButtonPlaceholderText {
+  font-size: 24px;
+  font-family: "Bungee", sans-serif;
+}
