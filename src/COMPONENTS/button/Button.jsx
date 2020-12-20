@@ -1,14 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+
+import styles from "./button.module.css";
 
 const Button = ({ text, onClick, color, align }) => {
-  const classNames = [
+  /* const classNames = [
     "header-button",
     color === "black" && "main-black-color",
     color === "red" && "main-red-color",
     align === "left" && "align-left",
     align === "right" && "aligb-right"
   ].join(" ");
+  */
+
+  const classNames = cx(styles.headerButton, {
+    [styles.mainBlackColor]: color === "black",
+    [styles.mainRedColor]: color === "red",
+    [styles.alignRight]: align === "right",
+    [styles.alignLeft]: align === "left"
+  });
 
   return (
     <button className={classNames} onClick={onClick}>
