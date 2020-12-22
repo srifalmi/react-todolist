@@ -1,13 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
+/**  @jsx jsx */
+import { jsx } from "@emotion/react";
 
-import styles from "./todos.module.css";
+//import React from "react";
+import PropTypes from "prop-types";
+import * as styles from "./todos.styles";
+
+//import styles from "./todos.module.css";
 
 import Todo from "../todo/Todo";
 
 const Todos = ({ todos, completeTodo }) => {
   return (
-    <section className={styles.todos}>
+    <section css={styles.todos}>
       {todos.length > 0 &&
         todos.map((todo, index) => {
           return (
@@ -21,10 +25,10 @@ const Todos = ({ todos, completeTodo }) => {
           );
         })}
       {todos.length === 0 && (
-        <div className={styles.todoPlaceholderText}>
+        <div css={styles.todoPlaceholderText}>
           Add todo by clicking{" "}
-          <span className={styles.addButtonPlaceholderText}> Add </span> button
-          on the top left corner
+          <span css={styles.addButtonPlaceholderText}> Add </span> button on the
+          top left corner
         </div>
       )}
     </section>
