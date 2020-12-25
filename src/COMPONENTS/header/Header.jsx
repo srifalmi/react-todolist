@@ -3,6 +3,8 @@ import { jsx } from "@emotion/react";
 import PropTypes from "prop-types";
 
 //import styles from "./header.module.css";
+import Container from "../../Layout/Container";
+import Item from "../../Layout/Item";
 
 import { useTheme } from "@emotion/react";
 
@@ -13,10 +15,20 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   const theme = useTheme();
 
   return (
-    <section css={styles.header}>
-      <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
-      <h1 css={styles.headerTitle(theme)}>TODO LISTS</h1>
-      <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+    <section className="header-component">
+      <Container alignItems="flex-start">
+        <Item flex={1}>
+          <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
+        </Item>
+
+        <Item flex={2}>
+          <h1 css={styles.headerTitle(theme)}>TODO LISTS</h1>
+        </Item>
+
+        <Item flex={1} align="center">
+          <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+        </Item>
+      </Container>
     </section>
   );
 };

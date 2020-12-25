@@ -5,6 +5,8 @@ import Header from "../COMPONENTS/header/Header";
 import TodoForm from "../COMPONENTS/todoform/TodoForm";
 import Todos from "../COMPONENTS/todos/Todos";
 
+import Container from "../Layout/Container";
+
 const TodoList = () => {
   const [todos, setTodos] = useState([
     { text: "AKU SIAPA?", isCompleted: false },
@@ -38,13 +40,19 @@ const TodoList = () => {
 
   return (
     <Paper>
-      <Header
-        showAddToggle={showAddToggle}
-        showAdd={showAdd}
-        clearTodos={clearTodos}
-      />
-      <TodoForm addTodo={addTodo} showAdd={showAdd} />
-      <Todos todos={todos} completeTodo={completeTodo} />
+      <Container
+        flexDirection="column"
+        justifyContent="space-between"
+        height="100%"
+      >
+        <Header
+          showAddToggle={showAddToggle}
+          showAdd={showAdd}
+          clearTodos={clearTodos}
+        />
+        <TodoForm addTodo={addTodo} showAdd={showAdd} />
+        <Todos todos={todos} completeTodo={completeTodo} />
+      </Container>
     </Paper>
   );
 };

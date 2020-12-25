@@ -3,12 +3,14 @@ import { jsx, css } from "@emotion/react";
 
 import PropTypes from "prop-types";
 
-const Item = ({ children, flex }) => {
+const Item = ({ children, flex, align, padding }) => {
   return (
     <div
       className="flex-item"
       css={css`
         flex: ${flex};
+        text-align: ${align};
+        padding: ${padding};
       `}
     >
       {children}
@@ -16,12 +18,19 @@ const Item = ({ children, flex }) => {
   );
 };
 
+Item.defaultProps = {
+  align: "left",
+  padding: "unset"
+};
+
 Item.propTypes = {
   children: PropTypes.oneOf([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  flex: PropTypes.oneOf([PropTypes.number, PropTypes.string])
+  padding: PropTypes.string,
+  flex: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+  align: PropTypes.oneOf(["center", "left", "right", "justify"])
 };
 
 export default Item;

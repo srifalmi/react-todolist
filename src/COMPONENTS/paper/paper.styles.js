@@ -15,7 +15,8 @@ export const frame = ({ theme }) =>
 
     height: 100%;
 
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: space-between;
+    */
   `;
