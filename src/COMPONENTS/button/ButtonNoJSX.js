@@ -9,10 +9,17 @@ import * as styles from "./button.styles";
 const Button = ({ text, onClick, color, align }) => {
   const theme = useTheme();
 
-  return (
-    <button css={styles.button({ align, color, theme })} onClick={onClick}>
-      {text}
-    </button>
+  return jsx(
+    "button",
+    {
+      css: styles.button({
+        align,
+        color,
+        theme
+      }),
+      onClick: onClick
+    },
+    text
   );
 };
 
@@ -22,7 +29,7 @@ Button.defaultProps = {
   align: "left"
 };
 
-Button.propTypes = {
+Button.PropTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   color: PropTypes.oneOf(["black", "red"]),

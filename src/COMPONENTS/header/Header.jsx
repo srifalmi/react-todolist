@@ -2,13 +2,12 @@
 import { jsx } from "@emotion/react";
 import PropTypes from "prop-types";
 
-//import styles from "./header.module.css";
 import Container from "../../Layout/Container";
 import Item from "../../Layout/Item";
 
 import { useTheme } from "@emotion/react";
 
-import Button from "../button/Button";
+import Button from "../button/ButtonNoJSX";
 import * as styles from "./header.styles";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
