@@ -8,7 +8,7 @@ import * as styles from "./todos.styles";
 //import styles from "./todos.module.css";
 import Container from "../../Layout/Container";
 
-import Todo from "../todo/Todo";
+import Todo from "../todo/TodoClass";
 
 const Todos = ({ todos, completeTodo }) => {
   return (

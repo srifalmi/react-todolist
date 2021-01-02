@@ -7,7 +7,7 @@ import Item from "../../Layout/Item";
 
 import { useTheme } from "@emotion/react";
 
-import Button from "../button/ButtonNoJSX";
+import Button from "../button/ButtonClass";
 import * as styles from "./header.styles";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
