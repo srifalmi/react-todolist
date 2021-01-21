@@ -30,7 +30,7 @@ const Todos = ({ todos, completeTodo }) => {
           <div css={styles.todoPlaceholderText}>
             Add todo by clicking{" "}
             <span css={styles.addButtonPlaceholderText}> Add </span> button on
-            the top left corner
+            the top of left corner
           </div>
         )}
       </Container>
