@@ -9,8 +9,9 @@ const useStateWithlocalStorage = (localStorageKey) => {
   if (!localStorageKey) {
     throw new Error("You have to passed in a localStorage key as an argument!");
   }
+
   React.useEffect(() => {
-    localStorage.setItem(localStorageKey.JSON.stringfly(todos));
+    localStorage.setItem(localStorageKey, JSON.stringify(todos));
   }, [todos, localStorageKey]);
 
   return [todos, setTodos];

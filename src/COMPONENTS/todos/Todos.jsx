@@ -1,10 +1,11 @@
 /**  @jsx jsx */
 import { jsx } from "@emotion/react";
-
+import React from "react";
 //import React from "react";
 import PropTypes from "prop-types";
 import * as styles from "./todos.styles";
-
+import { Link } from "react-router-dom";
+import Item from "../../Layout/Item";
 //import styles from "./todos.module.css";
 import Container from "../../Layout/Container";
 
@@ -27,11 +28,20 @@ const Todos = ({ todos, completeTodo }) => {
             );
           })}
         {todos.length === 0 && (
-          <div css={styles.todoPlaceholderText}>
-            Add todo by clicking{" "}
-            <span css={styles.addButtonPlaceholderText}> Add </span> button on
-            the top of left corner
-          </div>
+          <React.Fragment>
+            <div css={styles.todoPlaceholderText}>
+              Add todo by clicking{" "}
+              <span css={styles.addButtonPlaceholderText}> Add </span> button on
+              the top of left corner
+            </div>
+            <Container justifyContent="center">
+              <Item>
+                <span css={styles.seeAboutPagePlaceholderText}>
+                  <Link to="/about">or Visit About Page</Link>
+                </span>
+              </Item>
+            </Container>
+          </React.Fragment>
         )}
       </Container>
     </section>

@@ -13,3 +13,9 @@ export const addButtonPlaceholderText = () =>
     font-size: 24px;
     font-family: "Bungee", sans-serif;
   `;
+
+export const seeAboutPagePlaceholderText = () =>
+  css`
+    font-family: "Bungee", sans-serif;
+    font-size: 18px;
+  `;

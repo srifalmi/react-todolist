@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import useStateWithlocalStorage from "../hooks/useStateWithlocalStorage";
 import Paper from "../COMPONENTS/paper/PaperClass";
-import Header from "../COMPONENTS/header/HeaderClass";
+import Header from "../COMPONENTS/header/Header";
 import TodoForm from "../COMPONENTS/todoform/TodoFormClass";
-import Todos from "../COMPONENTS/todos/TodosClass";
+import Todos from "../COMPONENTS/todos/Todos";
 
 import Container from "../Layout/Container";
 
@@ -20,14 +20,14 @@ const TodoList = () => {
     JSON.parse(localStorage.getItem("todos")) || []
   );
 */
-
+  const [todos, setTodos] = useStateWithlocalStorage("todos");
   const [showAdd, setShowAdd] = useState(false);
   /*
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 */
-  const [todos, setTodos] = useStateWithlocalStorage("todos");
+
   const addTodo = (value) => {
     if (todos.length < 7) {
       const addedTodo = [...todos, { text: value, isCompleted: false }];
