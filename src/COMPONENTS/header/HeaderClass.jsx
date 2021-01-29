@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import Container from "../../Layout/Container";
-import Item from "../../Layout/Item";
+import Item from "../../Layout/ItemClass";
 
 import Button from "../button/ButtonClass";
 import { withTheme } from "@emotion/react";
