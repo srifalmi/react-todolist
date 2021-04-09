@@ -10,7 +10,6 @@ const StyledButton = styled.button`
   color: ${(props) => props.textColor};
   text-align: ${(props) => props.align};
 
-  padding: 16px;
   padding-right: unset;
   cursor: pointer;
   background: unset;
